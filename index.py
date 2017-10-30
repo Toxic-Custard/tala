@@ -119,9 +119,9 @@ def decode(data):
 
 while True:
     logger.info("Showing main menu")
-    choice = tala.menu(["Public Message", "Memo", "Settings", "Power Off"])
+    choice = tala.menu(["Message", "Memo", "Settings", "Power Off"])
     time.sleep(1)
-    if choice == "Public Message":
+    if choice == "Message":
         ## ![QUANTUMBLACK] TODO: Make the below threading code run forever while Tala is running
 
         #def recv_data(stop_event):
@@ -161,7 +161,7 @@ while True:
                     }
                 }
 
-        logger.info("Sending Public Message: " + encode(message))
+        logger.info("Sending Message: " + encode(message))
 
         tala.send(encode(message))
         time.sleep(1)
